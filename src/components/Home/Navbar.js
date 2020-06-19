@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from './Home';
+import About from '../About/About';
+import Recipes from '../Recipes/Recipes';
  
 class Navbar extends Component {
     render() { 
@@ -8,9 +11,9 @@ class Navbar extends Component {
             <Router>
                 <div className="container-fluid">
                     <nav className="nav navbar navbar-dark">
-                        <ul>
-                            <li>
-                                <Link to="/">Home</Link>
+                        <ul className="nav">
+                            <li className="nav-link">
+                                <Link to="/" className="nav-item">Home</Link>
                             </li>
                             <li>
                                 <Link to="/about">About</Link>
@@ -20,6 +23,17 @@ class Navbar extends Component {
                             </li>
                         </ul>
                     </nav>
+                    <Switch>
+                        <Route path="/">
+                            <Home />
+                        </Route>
+                        <Route path="/about">
+                            <About />
+                        </Route>
+                        <Route path="/recipes">
+                            <Recipes />
+                        </Route>
+                    </Switch>
                 </div>
             </Router>
         );
