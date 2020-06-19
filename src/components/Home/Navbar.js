@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
  
 class Navbar extends Component {
     render() { 
         return (
             <Router>
-                <div>
-                    <nav>
+                <div className="container-fluid">
+                    <nav className="nav navbar navbar-dark">
                         <ul>
                             <li>
                                 <Link to="/">Home</Link>
