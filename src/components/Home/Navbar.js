@@ -9,17 +9,17 @@ class Navbar extends Component {
     render() { 
         return (
             <Router>
-                <div className="container-fluid">
-                    <nav className="nav navbar navbar-dark">
-                        <ul className="nav">
-                            <li className="nav-link">
-                                <Link to="/" className="nav-item">Home</Link>
+                <div className="container">
+                    <nav className="navbar navbar-expand-lg navbar-dark bg-light">
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <Link to="/" className="nav-link">Home</Link>
                             </li>
-                            <li>
-                                <Link to="/about">About</Link>
+                            <li className="nav-item">
+                                <Link to="/about" className="nav-link">About</Link>
                             </li>
-                            <li>
-                                <Link to="/recipes">Recipes</Link>
+                            <li className="nav-item">
+                                <Link to="/recipes" className="nav-link">Recipes</Link>
                             </li>
                         </ul>
                     </nav>
