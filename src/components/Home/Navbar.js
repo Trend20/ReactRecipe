@@ -9,8 +9,8 @@ class Navbar extends Component {
     render() { 
         return (
             <Router>
-                <div className="container">
-                    <nav className="navbar navbar-expand-lg navbar-dark bg-light">
+                <div className="container-fluid">
+                    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                         <ul className="navbar-nav">
                             <li className="nav-item">
                                 <Link to="/" className="nav-link">Home</Link>
@@ -24,14 +24,14 @@ class Navbar extends Component {
                         </ul>
                     </nav>
                     <Switch>
-                        <Route path="/">
-                            <Home />
-                        </Route>
                         <Route path="/about">
                             <About />
                         </Route>
                         <Route path="/recipes">
                             <Recipes />
+                        </Route>
+                        <Route path="/">
+                            <Home />
                         </Route>
                     </Switch>
                 </div>
